@@ -7,6 +7,7 @@
 
 #ifndef MODEL_NODE_H_
 #define MODEL_NODE_H_
+#include <iostream>
 
 template <class Type>
 class Node
@@ -16,7 +17,11 @@ private:
 	Node * pointers; //Reference to the array of nodes this is connected to.
 public:
 	Node();
+	Node(Type value); //Creates with a starting value.
 	virtual ~Node();
+	Type getValue();
+	void setValue(Type value);
+	Node * getPointers();
 };
 
 #endif /* MODEL_NODE_H_ */

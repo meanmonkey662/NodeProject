@@ -4,22 +4,25 @@
  *  Created on: Jan 27, 2016
  *      Author: kkoc6943
  */
-#include <iostream>
 #include "Node.h"
 
+template <class Type>
+Node<Type>::Node()
+{
+	this->pointers = nullptr;
+}
 
 template <class Type>
 Node<Type>::Node(Type value)
 {
-	this->value = 0;
+	this->value = value;
 	this->pointers = nullptr;
 }
-
 
 template <class Type>
 Node<Type>::~Node()
 {
-	// TODO Auto-generated destructor stub
+	//TODO Auto-generated destructor stub
 }
 
 template <class Type>
@@ -29,13 +32,13 @@ Type Node<Type> :: getValue()
 }
 
 template <class Type>
-void Node<Type> :: setValue(Type value)
+void Node<Type> :: setValue (Type value)
 {
 	this->value = value;
 }
 
 template <class Type>
-Node* Node<Type> :: getPointers()
+Node<Type>* Node<Type> :: getPointers()
 {
 	return this->pointers;
 }

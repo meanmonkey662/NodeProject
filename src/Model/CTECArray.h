@@ -21,7 +21,7 @@ public:
 	virtual ~CTECArray();
 	int getSize();
 	void set(int position, Type value);
-	Type get(int position);
+	Type* get(int position);
 };
 
 #endif /* MODEL_CTECARRAY_H_ */

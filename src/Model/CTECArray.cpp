@@ -17,8 +17,22 @@ CTECArray<Type>::CTECArray(int size)
 	//Defensive
 	if(size <=0)
 	{
-		cerr << "That is not valid"
+		cerr << "That is not valid" << endl;
 		return;
+	}
+	for(int index = 0; index < size; index++)
+	{
+		if(head != nullptr)
+		{	//Regular ArrayNodes are being made.
+			ArrayNode<Type> nextNode;
+			nextNode.setNext(head);
+			this->head = &nextNode;
+		}
+		else
+		{	//The first ArrayNode needs to be make;
+			ArrayNode<Type> firstNode;
+			this->head = &firstNode;
+		}
 	}
 }
 
@@ -63,7 +77,7 @@ Type* CTECArray<Type> :: get(int position)
 }
 
 template <class Type>
-void CTECArray<Type>::set(int position, Type value)
+void CTECArray<Type> :: set(int position, Type value)
 {
 	if (position >= size || position < 0)
 	{

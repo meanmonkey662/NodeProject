@@ -17,7 +17,7 @@ private:
 public:
 	ArrayNode();
 	ArrayNode(const Type& value);
-	ArrayNode(const Type&, ArrayNode * next);
+	ArrayNode(const Type& value, ArrayNode * next);
 	virtual ~ArrayNode();
 	ArrayNode * getNext();
 	void setNext(ArrayNode * next);

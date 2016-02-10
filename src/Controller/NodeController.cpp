@@ -6,30 +6,30 @@
  */
 
 #include "NodeController.h"
-
-#include <string>
 #include <iostream>
 
 using namespace std;
 
 NodeController::NodeController()
 {
-	stringNode.setValue("asdada");
-	intNode.setValue(999);
-
-	stringArrayNode.setValue("Words in here");
-	otherArrayNode.setValue("linked node");
-	stringArrayNode.setNext(&otherArrayNode);
+	notHipsterInts = new CTECArray<int>(5);
 }
 
 NodeController::~NodeController()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 void NodeController :: start()
 {
-	cout << "The contents of the stringNode are " << stringNode.getValue() << endl;
-	cout << "The contents of the stringArrayNode are: " << stringArrayNode.getValue() << endl;
-	cout << "This is connected to the stringArrayNode" << (*stringArrayNode.getNext()).getValue() << endl;
+	for(int index = 0; index < notHipsterInts->getSize(); index++)
+	{
+		notHipsterInts->set(index, (index * 23));
+	}
+
+	for(int index = notHipsterInts->getSize()-1; index >= 0; index--)
+	{
+		cout << "The contents of the notHipsterInts array node" << index << " are: " << notHipsterInts->get(index) << endl;
+	}
+
 }

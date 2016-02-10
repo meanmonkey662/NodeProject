@@ -12,13 +12,14 @@
 #include <string>
 #include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
-
+#include "../Model/CTECArray.cpp"
 
 using namespace std;
 
 class NodeController
 {
 private:
+	CTECArray<int> * notHipsterInts;
 	Node<string> stringNode;
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;

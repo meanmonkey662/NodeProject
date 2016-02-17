@@ -32,4 +32,7 @@ void NodeController :: start()
 		cout << "The contents of the notHipsterInts array node" << index << " are: " << notHipsterInts->get(index) << endl;
 	}
 
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation();
+
 }

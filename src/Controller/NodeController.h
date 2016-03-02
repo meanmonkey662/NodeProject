@@ -13,6 +13,8 @@
 #include "../Model/ArrayNode.h"
 #include "../Model/ArrayNode.cpp"
 #include "../Model/CTECArray.cpp"
+#include "../Model/Timer.cpp"
+==
 
 using namespace std;
 

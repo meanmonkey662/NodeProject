@@ -5,27 +5,33 @@
  *      Author: kkoc6943
  */
 
+
 #ifndef MODEL_CTECLIST_H_
 #define MODEL_CTECLIST_H_
+#include "ArrayNode.h"
+template <class Type>
 
-class CTECList
-{private:
-	int  size;
-	ArrayNode<Type> * head;
-	ArrayNode<Type> * end;
-	public:
-
+class CTECList {
+private:
+	ArrayNode<Type>head;
+	ArrayNode<Type>end;
+	int size;
+	void calculateSize();
+public:
 	CTECList();
 	virtual ~CTECList();
-	Type removeFromFront();
-	Type removeFromEnd();
 	int getSize();
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void addAtIndex(int index, const Type& value);
+
 	Type getFront();
 	Type getEnd();
-	Type getFronIndex(int index);
-	Type remmoveFromIndex(int index);
-	Type set(int index, const Type& value)
-	};
+	Type getFromIndex(int index);
+	Type removeFromFront();
+	Type removeFromEnd();
+	Type removeFromIndex(int index);
+	Type set(int index, const Type& value);
+};
+
+#endif /* MODEL_CTECLIST_H_ */
